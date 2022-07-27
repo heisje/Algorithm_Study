@@ -15,3 +15,4 @@ for i in range(N):
     rank_list.append(count)
 for i in rank_list:
     print(i, end=' ')
+    
