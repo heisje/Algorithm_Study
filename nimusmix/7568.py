@@ -1,3 +1,5 @@
+# 68ms
+
 n = int(input())
 people = []
 rank = []
