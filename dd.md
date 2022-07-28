@@ -11,7 +11,7 @@
    <td align="center"><a href="https://github.com/EZ-000"><img src="https://avatars.githubusercontent.com/u/85544352?v=4" width="100px;" alt=""/>
    <br /><sub><b>EZ-000</b><br></sub></a><br /></td>
    <td align="center"><a href="https://github.com/Choihyoungkyu"><img src="https://avatars.githubusercontent.com/u/109322428?v=4" width="100px;" alt=""/>
-   <br /><sub><b>Choihyoungkyu</b><br></sub></a><br /></td>
+   <br /><sub><b>Choihyoungkyu</b><br></sub></a></td>
   </tr>
 </table>
 <br />
