@@ -17,7 +17,6 @@
    <br /><sub><b>Choihyoungkyu</b><br></sub></a></td>
   </tr>
 </table>
-<br />
 
 ### ✔️ 목표: 8월 SW역량테스트 IM
 
