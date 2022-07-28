@@ -1,6 +1,6 @@
 n = int(input())
 people = []
-rank = []
+r = []
 
 for i in range(n):
     kg, cm = map(int, input().split())
@@ -11,6 +11,6 @@ for i in range(n):
     for j in range(n):
         if people[i][0] < people[j][0] and people[i][1] < people[j][1]:
             count += 1
-    rank.append(count+1)
+    r.append(count+1)
     
 print(*rank)
