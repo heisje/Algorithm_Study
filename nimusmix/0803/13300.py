@@ -2,8 +2,7 @@ N, K = map(int, input().split())
 cnt = 0
 
 students = [list(map(int, input().split())) for _ in range(N)]
-# 각 성별의 학년만 리스트에 저장
-girls = [g[1] for g in students if g[0] == 0]
+girls = [g[1] for g in students if g[0] == 0]       # 각 성별의 학년만 리스트에 저장
 boys = [b[1] for b in students if b[0] == 1]
 
 for i in [girls, boys]:
