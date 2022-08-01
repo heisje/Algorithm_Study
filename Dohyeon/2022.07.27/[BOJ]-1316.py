@@ -4,7 +4,7 @@ word_list =[]
 for i in range(n):
     a = input()
     word_list.append(a) # 입력 받은 단어 하나씩 list에 넣음
-for i in range(n): # 단어 수만큼 반복
+for i in range(n):   # 단어 수만큼 반복
     
     is_group = True # 그룹단어 표시를 위함, 그대로 True로 나온다면 그룹단어
     check_list = [] # 나온 알파벳을 저장하기 위함
