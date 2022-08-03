@@ -1,7 +1,7 @@
 def compare(a, b):
     if a[0] > b[0]:
         if a[1] > b[1]:
-            return 1   # a가 덩치가 큰 경우
+            return 1 # a가 덩치가 큰 경우
     if a[0] < b[0]:
         if a[1] < b[1]:
             return 2 # b가 덩치가 큰 경우 , 문제에서는 자기보다 덩치가 큰 사람 수가 등수로 이어지므로 이 결과가 필요

@@ -13,7 +13,7 @@ result = [[] for i in range(NPM)] # result라는 리스트 안에 순열의 수�
 # key idea : 재귀의 윗 단계에서 좌표를 정해주면, 호출된 함수에서 그 좌표안에만 집어넣음
 
 def make_line(choice_list, choice_num, start, cases):  # 뽑을 수 있는 수만 남은 리스트, 뽑아야하는 숫자 수, 시작 idx, 경우의 수
-    if choice_num == 1:     #  하나만 더 뽑으면 되는 경우
+    if choice_num == 1: #  하나만 더 뽑으면 되는 경우
         for last in range(len(choice_list)): # 뽑을 수 있는 수 중 하나를 뽑음
             result[start + last].append(choice_list[last]) # 정해준 시작 좌표 부터 한칸 씩 넣을 수 있는 숫자를 넣어줌
         return None
