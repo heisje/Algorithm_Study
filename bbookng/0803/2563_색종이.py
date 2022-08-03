@@ -14,7 +14,7 @@ for _ in range(n):
 
 result = 0
 
-for i in range(len(board)):                     # 1인 항목들의 갯수만큼 result에 저장
+for i in range(len(board)):                     # 1인 항목들의 갯수만큼 result에 저장.
     result += sum(board[i])
 
 print(result)
