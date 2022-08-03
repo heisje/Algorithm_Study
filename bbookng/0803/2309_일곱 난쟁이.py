@@ -9,5 +9,5 @@ for i in arr:
                 break
 
 
-arr = sorted(arr)                           # 키 순으로 정렬.
+arr = sorted(arr)                           # 키 순으로 정렬
 print(*arr, sep = '\n')
