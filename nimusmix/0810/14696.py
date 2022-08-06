@@ -17,4 +17,3 @@ for _ in range(N):
         else:
             if i == 1:
                 print('D')
-                break
