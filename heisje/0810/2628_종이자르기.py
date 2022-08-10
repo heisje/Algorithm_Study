@@ -19,7 +19,7 @@ y_li.sort()
 
 #x축 자르기
 x_max = 0    #자른 최대값을 구하기 위해
-end_num = 0  #처음부터 자르기 위해
+end_num = 0  #마지막으로 잘랐던 숫자
 for x in x_li:
     if x - end_num > x_max:
         x_max = x - end_num
