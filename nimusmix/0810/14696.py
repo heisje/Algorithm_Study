@@ -14,6 +14,5 @@ for _ in range(N):
         elif A[1:].count(i) < B[1:].count(i):
             print('B')
             break
-        else:
-            if i == 1:
+        elif i == 1:                              # for-else로 출력하면 시간이 더 오래 걸림.
                 print('D')
