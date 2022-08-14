@@ -1,4 +1,5 @@
 #https://www.acmicpc.net/problem/1244
+#72ms
 
 #문제:   1.스위치를 주고
 #        2.성별이 남자일 때 -> 배수 스위치
