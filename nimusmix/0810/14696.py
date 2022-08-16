@@ -15,4 +15,4 @@ for _ in range(N):
             print('B')
             break
         elif i == 1:                              # for-else로 출력하면 시간이 더 오래 걸림.
-                print('D')
+            print('D')
