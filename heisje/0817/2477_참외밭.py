@@ -6,7 +6,7 @@
 #변수세팅
 N = int(input())                #1m**2당 심을 수 있는 참외의 개수
 li = []                         #리스트에 전부 넣기 (idx, width)
-check_li = [0,0,0,0]            #체크리스트에 갯수세기
+check_li = [0,0,0,0]            #체크리스트에 갯수세기 (1,2,3,4 방향 생성)
 
 #입력
 for idx in range(6):
@@ -14,16 +14,14 @@ for idx in range(6):
     li.append([bearing - 1,width])           #리스트에 전부 넣기
     check_li[bearing - 1] += 1               #체크리스트에 개수 세기
 
+
 #모서리 찾기, 긴변에서부터 3개의 거리만큼에 모서리가 있다.
-edge = dict() #모서리를 담을 변수 (set안됨) 
+# 4 2 3 1* 3* 1 --- *는 항상 긴변에서 3의 거리만큼 있다. 
+edge = dict() #모서리를 담을 변수 (set안됨) (긴변에서 3만큼 거리를 쟀을 때 같은 값이 안들어가도록)
 big_edge = [] #긴 변
 for idx in range(6):
-    if check_li[li[idx][0]] == 1:  #긴 변일때
-        if check_li[li[(idx + 3) % 6][0]] == 2: #앞이 짧은 변이면 추가 #li = [(idx, width)]
-            edge[li[(idx + 3) % 6][0]] = li[(idx + 3) % 6][1]
-        elif check_li[li[(idx - 3 + 6) % 6][0]] == 2: #뒤가 짧은 변이면 추가
-            edge[li[(idx - 3 + 6) % 6][0]] = li[(idx - 3 + 6) % 6][1]
-
+    if check_li[li[idx][0]] == 1:  #긴 변일때(한 개 밖에 없을 때)
+        edge[li[(idx + 3) % 6][0]] = li[(idx + 3) % 6][1]
         big_edge.append(li[idx][1]) #긴 변 저장
 
 #작은 모서리 넓이 구하기
