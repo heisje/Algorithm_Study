@@ -5,8 +5,7 @@ C, R = map(int,input().split())
 N = int(input())
 cnt = 0
 
-# C*R이 N보다 크다면 배정할 수 없으므로
-if N > C*R:
+if N > C*R:                         # C*R이 N보다 크다면 배정할 수 없으므로
     print(0)
 else:
     # 달팽이 껍데기 벗기기
