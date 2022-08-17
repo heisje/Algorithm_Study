@@ -18,14 +18,14 @@ for _ in range(HU_NUM):
     #남자일 때
     if gender == 1:
         for i in range(len(switch)):
-            if i % idx == idx - 1:
+            if i % idx == idx - 1:  #idx의 배수를 바꿔줌
                 switch[i] = change(switch[i])
 
     #여성일 때
     if gender == 2:
         idx -= 1
+        switch[idx] = change(switch[idx])
         if len(switch) - idx > idx: # 스위치 값이 중앙보다 작으면
-            switch[idx] = change(switch[idx])
             for i in range(1, idx + 1): # 0~idx까지만 비교 후 변경
                 if switch[idx - i] == switch[idx + i]: 
                     switch[idx - i] = change(switch[idx - i])
@@ -33,7 +33,6 @@ for _ in range(HU_NUM):
                 else:
                     break
         else:                       # 스위치 값이 중앙보다 크면
-            switch[idx] = change(switch[idx])
             for i in range(1, N - idx): #idx~HU_NUM까지만 비교 후 변경
                 if switch[idx - i] == switch[idx + i]:
                     switch[idx - i] = change(switch[idx - i])
