@@ -1,9 +1,6 @@
-import sys
-input = sys.stdin.readline
-
 N, K = map(int, input().split())
 temp = list(map(int, input().split()))
-maxT = -9999999999999999999999
+maxT = -999999999999999
 sumT = 0
 
 for i in range(N-K+1):
