@@ -18,7 +18,6 @@ def sol(N):
             sum_r += side(top_idx, arr[n])#윗면과 아랫면을 제외한 최대값을 구해줌
         result.append(sum_r)#더한 값 저장
     return max(result) #더한 값 중 최대값 저장
-
 def top_bo(t): #인덱스를 넣으면 반대위치 인덱스를 return해주는 함수
     if t == 0: return 5
     if t == 5: return 0
