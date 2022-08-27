@@ -5,8 +5,7 @@ T = int(input())
 for _ in range(T):
     p = deque(input())
     n = int(input())
-    digits = input()
-    digits = digits.strip('[')
+    digits = input().strip('[')
     
     if digits != ']': 
         digits = deque(map(int, digits.strip(']').split(',')))
