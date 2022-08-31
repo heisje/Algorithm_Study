@@ -1,6 +1,7 @@
 import sys
 input = lambda : sys.stdin.readline().strip()
 
+
 testcase = int(input())
 
 p_dict = {1 : 1, 2 : 1, 3 : 1}                                  # 데이터들을 저장해 둘 딕셔너리
