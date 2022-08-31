@@ -1,6 +1,7 @@
 import sys
 input = sys.stdin.readline
 
+
 T = int(input())
 for tc in range(T):
     command_list = input()
