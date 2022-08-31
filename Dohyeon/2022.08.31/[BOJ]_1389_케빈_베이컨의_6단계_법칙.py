@@ -1,4 +1,5 @@
 def cal_kevin_bacon (V_list, E_dict):
+
     min_val = len(V_list) * len(E_dict)
     In_SSA = V_list[0]                            # 일단 가장 첫번째 사람이 가장 인싸라고 생각하자
     for guy in V_list:
