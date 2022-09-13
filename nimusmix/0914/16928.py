@@ -20,8 +20,8 @@ def bfs():
                 queue.append(w)
                 visited[w] = visited[s] + 1
 
-adjList = [[] for _ in range(107)]
-visited = [-1 for _ in range(107)]
+adjList = [[] for _ in range(106)]
+visited = [-1 for _ in range(106)]
 N, M = map(int, input().split())
 for _ in range(N+M):
     a, b = map(int, input().split())
