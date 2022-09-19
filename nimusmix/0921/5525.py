@@ -4,11 +4,19 @@ input = lambda: sys.stdin.readline().strip()
 N = int(input())
 M = int(input())
 S = input()
-word = 'I' + 'OI' * N
-cnt = 0
 
-for i in range(M):
-    if S[i:i+(N*2+1)] == word:
-        cnt += 1
+cnt = 1
+idx = ans = 0
 
-print(cnt)
+while idx < M-2:
+    if S[idx:idx+3] == "IOI":
+        cnt += 2
+        idx += 2
+        if cnt == 1+N*2:
+            cnt -= 2
+            ans += 1
+    else:
+        cnt = 1
+        idx += 1
+
+print(ans)
