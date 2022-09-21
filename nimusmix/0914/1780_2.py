@@ -28,6 +28,6 @@ rst = [0, 0, 0]
 recur(0, 0, N)
 for i in rst:
     if rst.count(0) == 2:                                           # rst에 0이 2개면 한 가지 숫자만 있다는 것이므로
-        if i: print(1)                                              # 숫자가 있는 걸 1로 바꿔준 다음 출력
+        if i: print(1)                                              # 값이 있는 걸 1로 바꿔준 다음 출력
         else: print(0)
     else: print(i)
