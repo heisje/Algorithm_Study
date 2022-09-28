@@ -23,5 +23,5 @@ for n in range(1, N+1):
         count += 1
         visited[n] = 1
         dfs(n)
-print(count)
-#실버2 / 40분 / 932ms
+print(count) 
+#실버2 / 40분 / 932ms  #

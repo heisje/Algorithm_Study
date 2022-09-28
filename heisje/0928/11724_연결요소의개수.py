@@ -22,5 +22,5 @@ for n in range(N):
                     visited[node] = 1
                     stack.append(node)
 print(count)
-#실버2 / 40분 / 892ms
+#실버2 / 40분 / 892ms  #
 
