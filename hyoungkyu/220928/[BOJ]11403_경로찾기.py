@@ -1,4 +1,4 @@
-# 실버1 / 340ms
+# 실버1 / 340ms 
 import sys
 input = lambda:sys.stdin.readline().strip()
 
