@@ -6,6 +6,7 @@ M = int(input())
 arr = set(input().split())
 result = abs(N-100)                                     # 그냥 +, - 로 이동하는 경우를 최솟값으로 설정
 
+
 for i in range(10000001):                               # 작은 숫자부터, 큰 숫자부터 합한 경우의 수
     i = str(i)                                          # index 사용하기 위해서 string으로 변경
     for j in range(len(i)):                             # i의 길이 만큼

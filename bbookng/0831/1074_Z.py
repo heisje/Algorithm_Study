@@ -13,3 +13,5 @@ while N > 0:
     c = c % (2 ** N)
 
 print(result)
+
+

@@ -12,6 +12,7 @@ for i in range(dp.index(max(dp))):          # 왼쪽에서 max값 까지
         dp[i+1] = dp[i]                     # 테두리 씌우기
 
 for i in range(1000, dp.index(max(dp)), -1):# 이건 오른쪽에서 max값 까지
+    if dp[i] > dp[i - 1]:
         dp[i-1] = dp[i]                     # 마찬가지로 테두리 씌우기
 
 print(sum(dp))
