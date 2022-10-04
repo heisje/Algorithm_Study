@@ -17,7 +17,6 @@
    <br /><sub><b>Choihyoungkyu</b><br></sub></a></td>
   </tr>
 </table>
-### ✔️ 목표: 다 같이 A형 취득 !
 ### ✔️ 목표: SW 역량 테스트 A형
 ### ✔️ 시간: 수요일 9 P.M.
 
@@ -39,7 +38,6 @@
   [CFS] - 코드포스  
   [SEA] - 삼성SW Expert Academy  
   [ETC] - 그외  
-  
 
 (commit 규칙 출처: https://github.com/ellynhan/challenge100-codingtest-study)
 
