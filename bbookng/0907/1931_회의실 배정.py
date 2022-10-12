@@ -2,7 +2,7 @@ import sys
 input = lambda :sys.stdin.readline().strip()
 
 N = int(input())
-arr = [list(map(int, input().split())) for _ in range(N)]
+arr = [tuple(map(int, input().split())) for _ in range(N)]
 
 arr.sort(key= lambda x:x[0])            # 시작시간, 끝나는시간 둘 다 오름차순으로 정렬
 arr.sort(key= lambda x:x[1])

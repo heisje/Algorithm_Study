@@ -4,7 +4,6 @@ input = lambda : sys.stdin.readline().strip()
 N, K = map(int, input().split())
 arr = list(map(int, input().split()))
 
-
 tmp = sum(arr[0:K])                 # 첫번째 부터 K 번까지
 board = [tmp]                       # 수열 담기
 

@@ -12,7 +12,7 @@ for _ in range(n):
     arr[x][y-1] += 1                                # x, y값에 따라 리스트의 각 항목에 +1
 
 result = 0
-for i in range(2):                                  # 성별을 기준으로 순환
+ for i in range(2):                                 # 성별을 기준으로 순환
     for j in range(6):                              # 학년을 기준으로 순환
         
          # i성별 j학년의 학생 수에서 한 방에 배정할 수 있는 인원 수인 k 나누기
