@@ -56,6 +56,7 @@ def bfs():
         elif flag_r and not flag_b:
             return depth
         else:
+
             if rr == br and rc == bc:
                 if dist_r < dist_b:
                     br += -dir_b[0]
@@ -93,5 +94,4 @@ for i in range(N):
         if board[i][j] == 'O':
             O = (i, j)
 
-visited = {}
 print(bfs())
