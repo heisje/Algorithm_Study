@@ -28,14 +28,14 @@ dice_info = {
 direction = {1: (0, 1), 2: (0, -1), 3: (-1, 0), 4: (1, 0)}
 
 pointer = deque()
-pointer.append((y, x))
+pointer.append((x, y))
 
 for c in commands:
     i, j = pointer[-1]
     di, dj = direction[c]
     ni, nj = i + di, j + dj
     
-    if 0 <= ni < N and 0 <= nj < N:
+    if 0 <= ni < N and 0 <= nj < M:
         roll_dice(c)
         
         pointer.append((ni, nj))
