@@ -22,8 +22,23 @@ def solution(str1, str2):
             else:                                                # list1의 원소가 list2에 없다면
                 idx += 1                                         # idx += 1
     
-        hap = kyo + len(list1+ list2)                            # 합집합의 길이 = 교집합의 길이 + (list1 + list2)의 길이
+        hap = kyo + len(list1 + list2)                           # 합집합의 길이 = 교집합의 길이 + (list1 + list2)의 길이
         jq = kyo / hap                                           # 자카드 유사도
         return int(jq * M)
     else:
         return M
+
+
+# 테스트 1 〉	통과 (0.02ms, 10.4MB)
+# 테스트 2 〉	통과 (0.02ms, 10.2MB)
+# 테스트 3 〉	통과 (0.01ms, 10.2MB)
+# 테스트 4 〉	통과 (0.74ms, 10.2MB)
+# 테스트 5 〉	통과 (0.02ms, 10.4MB)
+# 테스트 6 〉	통과 (0.01ms, 10.4MB)
+# 테스트 7 〉	통과 (0.08ms, 10.3MB)
+# 테스트 8 〉	통과 (0.01ms, 10.3MB)
+# 테스트 9 〉	통과 (0.07ms, 10.3MB)
+# 테스트 10 〉	통과 (0.14ms, 10.2MB)
+# 테스트 11 〉	통과 (0.26ms, 10.2MB)
+# 테스트 12 〉	통과 (0.01ms, 10.2MB)
+# 테스트 13 〉	통과 (0.04ms, 10.2MB)
