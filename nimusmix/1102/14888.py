@@ -1,5 +1,4 @@
 import sys
-from itertools import permutations
 input = lambda: sys.stdin.readline().strip()
         
 def dfs(i, result):
