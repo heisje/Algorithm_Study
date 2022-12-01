@@ -8,10 +8,7 @@ def solution(m, n, board):
         matrix.append(temp)
     check_matrix = [[1 for _ in range(n)] for __ in range(m)]
     while True:
-        """
-        for i in range(m):
-            print(matrix[i])
-        """
+
         did_have_same = 0
         for i in range(m - 1):
             for j in range(n -1):
@@ -40,10 +37,7 @@ def solution(m, n, board):
             for j in range(n):
                 if check_matrix[i][j] == 0:
                     matrix[i][j] = 0
-        """
-        for i in range(m):
-            print(check_matrix[i])
-        """
+
         for j in range(n):
             for i in range(m - 1, 0, -1):
                 if check_matrix[i][j] == 0:
@@ -58,21 +52,24 @@ def solution(m, n, board):
                             break
                     else:
                         break
-                """
-                if check_matrix[i][j] == 0:
-                    check_matrix[i][j] = check_matrix[i - 1][j]
-                    check_matrix[i - 1][j] = 0
-                    matrix[i][j] = matrix[i - 1][j]
-                    matrix[i - 1][j] = 0
-                
 
-        for i in range(m):
-            print(matrix[i])
-        print("---")
-        """
         if did_have_same == 0:
             break
     return removed
 
 sol = solution(6, 6,["TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"])
 print(sol)
+
+"""
+테스트 1 〉	통과 (0.06ms, 10.2MB)
+테스트 2 〉	통과 (0.10ms, 10.2MB)
+테스트 3 〉	통과 (0.02ms, 10.3MB)
+테스트 4 〉	통과 (1.95ms, 10.2MB)
+테스트 5 〉	통과 (123.97ms, 10.3MB)
+테스트 6 〉	통과 (10.31ms, 10.2MB)
+테스트 7 〉	통과 (1.12ms, 10.2MB)
+테스트 8 〉	통과 (1.98ms, 10.3MB)
+테스트 9 〉	통과 (0.08ms, 10.2MB)
+테스트 10 〉	통과 (1.14ms, 10.2MB)
+테스트 11 〉	통과 (2.37ms, 10.2MB)
+"""
