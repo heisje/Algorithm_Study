@@ -1,7 +1,7 @@
 def solution(clothes):
     hash = {}
     
-    for name, category in clothes:
+    for _, category in clothes:
         if category not in hash:
             hash[category] = 2
         else:
