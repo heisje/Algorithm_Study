@@ -6,7 +6,7 @@ def solution(files):
     for file in files:
         for idx, i in enumerate(file):
             if i.isdigit():                                           # 첫 번째로 나오는 숫자 찾기
-                head = file[0:idx].upper()                            # head에 첫 번째 숫자 이전까지를 대문자로 저장.
+                head = file[0:idx].upper()                            # head에 첫 번째 숫자 이전까지를 대문자로 저장
                 
                 for j in range(idx, idx+5):                           # number는 최대 5글자이므로 첫 번째 숫자부터 5회 순회
                     if j < len(file) and not file[j].isdigit():       # 숫자가 아니면 tail이므로
