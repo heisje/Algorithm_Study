@@ -44,8 +44,8 @@ while(fish and fish[0] < shark_level):          # 물고기가 존재하면서 �
 
         temp_i = node // 100
         temp_j = node % 100
-        if visited[node] == min_dist:
-            done = True
+        if visited[node] == min_dist:           # pop해서 뽑아낸 것이 최소거리이면 이미 최소거리 내에 물고기는 다 확인했다는 뜻
+            done = True                         # 그러니 빠져나온다.
             break
         for i in range(4):
             new_pos_x = temp_i + dx[i]
@@ -65,17 +65,17 @@ while(fish and fish[0] < shark_level):          # 물고기가 존재하면서 �
                     queue.append(new_pos_x * 100 + new_pos_y)
                     visited[new_pos_x * 100 + new_pos_y] = visited[node] + 1
 
-                    found_fish.append(new_pos_x*100 + new_pos_y)
-                    min_dist = visited[node] + 1
+                    found_fish.append(new_pos_x*100 + new_pos_y)                    # 찾아낸 먹을 수 있는 물고기 리스트에 저장
+                    min_dist = visited[node] + 1                                    # 가장 먼저 찾아내었을 때가 최소 거리
     if found_fish:
-        target = min(found_fish)                # 가장 작은 값이 가장 위의 왼쪽 값이 된다.
-        time += visited[target]
-        shark_x, shark_y = target // 100 , target % 100
-        fish.remove(matrix[shark_x][shark_y])
-        matrix[shark_x][shark_y] = 0
+        target = min(found_fish)                # 가장 작은 값이 가장 위이며 왼쪽인 값이 된다.
+        time += visited[target]                 # 거리만큼 걸린 시간을 더해준다.
+        shark_x, shark_y = target // 100 , target % 100     # 좌표 암호 해독
+        fish.remove(matrix[shark_x][shark_y])               # 해당 위치 값을 남은 물고기 리스트에서 제거
+        matrix[shark_x][shark_y] = 0                        # 해당 위치를 비워줌
         shark_exp += 1
 
-    if shark_exp == shark_level:
+    if shark_exp == shark_level:            # 상어 레벨업 확인
         shark_exp = 0
         shark_level += 1
     if not done:                            # bfs를 돌려는데 먹을게 없을 경우

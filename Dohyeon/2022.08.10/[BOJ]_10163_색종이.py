@@ -4,9 +4,9 @@ input = lambda: sys.stdin.readline().strip()
 N = int(input())
 point_list = [[0, 0, 0, 0] for i in range(N)]
 max_num = 0
+
 for i in range(N):
-    point_list[i][0], point_list[i][1], point_list[i][2], point_list[i][3] = map(int,
-                                                                                 input().split())  # 입력 받은 데이터를 저장해둔다.
+    point_list[i][0], point_list[i][1], point_list[i][2], point_list[i][3] = map(int, input().split())  # 입력 받은 데이터를 저장해둔다.
     for j in (range(4)):
         if point_list[i][j - 2] + point_list[i][j] > max_num:
             max_num = point_list[i][j - 2] + point_list[i][j] + 1
