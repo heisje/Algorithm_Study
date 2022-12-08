@@ -12,7 +12,7 @@ for tc in range(1, testcase + 1):
         result = "c" # 점
     elif (x2 - p1) * (p2 - x1) == 0 or (y2 - q1) * (q2 - y1) == 0:
         if (x2 - p1) * (p2 - x1) == 0 and (y2 - q1) * (q2 - y1) > 0:
-            result = "d"
+            result = "d"                                                # 같은 직선을 공유하지만 떨어져 있는 경우
         elif (x2 - p1) * (p2 - x1) > 0 and (y2 - q1) * (q2 - y1) == 0:
             result = "d"
         else:
