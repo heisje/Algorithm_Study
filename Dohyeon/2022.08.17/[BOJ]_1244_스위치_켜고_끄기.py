@@ -27,7 +27,7 @@ for i in range(num_of_people):
     else:                               # 여학생인 경우
         change_switch(switch_list, b - 1)
         k = 1
-        while (True):
+        while(True):
             try:                        # 인덱스 에러가 날 때 까지, 또는 양 옆이 대칭이 안될 때 까지
                 if switch_list[b - 1 - k] == switch_list[b - 1 + k]:
                     if (b - 1 - k) < 0:  # 중요!!!!!!! try except 문에서 python은 음수 인덱스도 정상으로 처리하기 때문에 음수 인덱스가 error 처리 되지 않음

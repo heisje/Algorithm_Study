@@ -33,7 +33,7 @@ for j in range(len(comb)//2):
     set1 = set(comb[j])                                
     set2 = full_set - set1                              
 
-    list1 = list(set1)                                  
+        list1 = list(set1)
     list2 = list(set2)
 
     gap = abs(calc_taste(list2) - calc_taste(list1))
