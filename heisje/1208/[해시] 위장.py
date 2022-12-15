@@ -1,6 +1,7 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42578
 from collections import defaultdict
 
+
 def solution(clothes):
     # 옷 구하기
     clothes_dict = defaultdict(list)
@@ -17,6 +18,7 @@ def solution(clothes):
     for idx in range(1, len(clothes_number)):
         answer = answer * clothes_number[idx]
     return answer - 1
+
 
 a = [["yellow_hat", "headgear"], ["blue_sunglasses", "eyewear"], ["green_turban", "headgear"]]
 solution(a)

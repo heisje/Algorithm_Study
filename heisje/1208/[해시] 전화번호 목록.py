@@ -1,6 +1,7 @@
 # https://school.programmers.co.kr/learn/courses/30/lessons/42577
 from collections import defaultdict
 
+
 def solution(phone_book):
     answer = True
     all_dict = defaultdict(list)
@@ -16,6 +17,7 @@ def solution(phone_book):
         if len(all_dict[phone]) > 1:
             answer = False
             break
+
     return answer
 
 solution(["119", "97674223", "1195524421"])
