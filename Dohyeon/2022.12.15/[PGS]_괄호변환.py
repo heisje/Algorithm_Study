@@ -32,6 +32,7 @@ def solution(p):
             return '(' + returned_p + ')' + temp
 
 
+
 print(solution("()))((()"))
 
 """
