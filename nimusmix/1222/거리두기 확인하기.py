@@ -1,25 +1,4 @@
 from itertools import combinations
-from collections import deque
-
-def bfs(i, j, tmp):
-    visited = [[0] * len(tmp[0]) for _ in range(len(tmp))]
-    visited[i][j] = 1
-    queue = deque()
-    queue.append((i, j))
-    
-    while queue:
-        si, sj = queue.popleft()
-        
-        if (si != i or sj != j) and tmp[si][sj] == 'P':
-            return 0
-        
-        for di, dj in [(0, 1), (1, 0), (0, -1)]:
-            mi, mj = si + di, sj + dj
-            if 0 <= mi < len(tmp) and 0 <= mj < len(tmp[0]) and visited[mi][mj] == 0 and tmp[mi][mj] != 'X':
-                visited[mi][mj] = 1
-                queue.append((mi, mj))
-    return 1
-
 
 def check(place):
     person = []
@@ -32,21 +11,16 @@ def check(place):
         si, sj = combi[0]
         vi, vj = combi[1]
 
-        if abs(si - vi) + abs(sj - vj) < 3:
-            print((si, sj), (vi, vj))
-            # for i in place:
-            #     print(i)
+        # 맨해튼 거리가 2 이하이면
+        if abs(si - vi) + abs(sj - vj) <= 2:
             tmp = [i[min(sj, vj):max(sj, vj) + 1] for i in place[min(si, vi):max(si, vi) + 1]]
-            for i in tmp:
-                print(i)
-            print()
             for i in range(len(tmp)):
                 for j in range(len(tmp[0])):
                     if tmp[i][j] == 'P':
-                        rst = bfs(i, j, tmp)
-                        break
-                    if rst == 0:
-                        return 0
+                        for di, dj in [(0, 1), (1, 0), (0, -1), (-1, 0)]:
+                            mi, mj = i + di, j + dj
+                            if 0 <= mi < len(tmp) and 0 <= mj < len(tmp[0]) and tmp[mi][mj] != 'X':
+                                return 0
     return 1
 
 def solution(places):
@@ -56,6 +30,34 @@ def solution(places):
     return ans
 
 
-
-print(solution([["POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"], ["POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"], ["PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"], ["OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"], ["PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"]]))
-# print(solution([["POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"]]))
+# 테스트 1 〉	통과 (0.20ms, 10.3MB)
+# 테스트 2 〉	통과 (0.10ms, 10.2MB)
+# 테스트 3 〉	통과 (0.06ms, 10.2MB)
+# 테스트 4 〉	통과 (0.06ms, 10.2MB)
+# 테스트 5 〉	통과 (0.04ms, 10.2MB)
+# 테스트 6 〉	통과 (0.04ms, 10.2MB)
+# 테스트 7 〉	통과 (0.04ms, 10.2MB)
+# 테스트 8 〉	통과 (0.06ms, 10.2MB)
+# 테스트 9 〉	통과 (0.08ms, 10.3MB)
+# 테스트 10 〉	통과 (0.05ms, 10.3MB)
+# 테스트 11 〉	통과 (0.09ms, 10.1MB)
+# 테스트 12 〉	통과 (0.04ms, 10.3MB)
+# 테스트 13 〉	통과 (0.05ms, 10.2MB)
+# 테스트 14 〉	통과 (0.04ms, 10.4MB)
+# 테스트 15 〉	통과 (0.06ms, 10.2MB)
+# 테스트 16 〉	통과 (0.06ms, 10.2MB)
+# 테스트 17 〉	통과 (0.05ms, 10.4MB)
+# 테스트 18 〉	통과 (0.05ms, 10.3MB)
+# 테스트 19 〉	통과 (0.04ms, 10.3MB)
+# 테스트 20 〉	통과 (0.07ms, 10.3MB)
+# 테스트 21 〉	통과 (0.05ms, 10.1MB)
+# 테스트 22 〉	통과 (0.05ms, 10.3MB)
+# 테스트 23 〉	통과 (0.03ms, 10.2MB)
+# 테스트 24 〉	통과 (0.04ms, 10.2MB)
+# 테스트 25 〉	통과 (0.02ms, 10.2MB)
+# 테스트 26 〉	통과 (0.02ms, 10.1MB)
+# 테스트 27 〉	통과 (0.05ms, 10.2MB)
+# 테스트 28 〉	통과 (0.03ms, 10.3MB)
+# 테스트 29 〉	통과 (0.03ms, 10.3MB)
+# 테스트 30 〉	통과 (0.03ms, 10.3MB)
+# 테스트 31 〉	통과 (0.05ms, 10.2MB)
