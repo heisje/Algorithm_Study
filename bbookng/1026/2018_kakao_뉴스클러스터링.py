@@ -9,14 +9,14 @@ def solution(str1, str2):
     set1 = makeSet(str1.upper())    # 모두 다 대문자로 변환
     set2 = makeSet(str2.upper())
 
-    # 합집합 구하기
-    tmp = set1[:]                   # set1 copy array 생성
-    union = len(set1)               # 합집합 개수 set1의 개수로 초기화
-    for i in set2:                  # set2 돌면서
-        if i not in tmp:            # set1에 없으면
-            union += 1              # 합집합 +1
-        else:                       # set1에 있으면
-            tmp.remove(i)           # tmp 에서 해당 원소 제거
+    # # 합집합 구하기
+    # tmp = set1[:]                   # set1 copy array 생성
+    # union = len(set1)               # 합집합 개수 set1의 개수로 초기화
+    # for i in set2:                  # set2 돌면서
+    #     if i not in tmp:            # set1에 없으면
+    #         union += 1              # 합집합 +1
+    #     else:                       # set1에 있으면
+    #         tmp.remove(i)           # tmp 에서 해당 원소 제거
 
     # 교집합 구하기
     tmp = set1[:]                   # set1 copy array 생성

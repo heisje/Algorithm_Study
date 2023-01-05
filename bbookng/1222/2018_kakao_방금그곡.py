@@ -3,6 +3,7 @@ import math
 def solution(m, musicinfos):
     answer = ''
     max_time = 0
+
     # 올림음들은 글자가 2개이기 때문에 바꿔줌
     m = m.replace("C#", "c").replace("D#", "d").replace("F#", "f").replace("G#", "g").replace("A#", "a")
 
