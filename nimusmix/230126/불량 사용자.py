@@ -18,7 +18,7 @@ def solution(user_id, banned_id):
     for i in candidate:
         ans *= i
     
-    return contained
+    return ans
 
 
 # 2
