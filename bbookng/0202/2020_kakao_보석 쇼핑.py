@@ -21,7 +21,6 @@ def solution(gems):
                     return [left + 1, right]
 
 
-
 print(solution(["DIA", "RUBY", "RUBY", "DIA", "DIA", "EMERALD", "SAPPHIRE", "DIA"]))
 print(solution(["AA", "AB", "AC", "AA", "AC"]))
 print(solution(["XYZ", "XYZ", "XYZ"]))
