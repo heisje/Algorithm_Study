@@ -58,3 +58,52 @@ def solution(n, build_frame):
 # 테스트 21 〉	통과 (1914.05ms, 10.3MB)
 # 테스트 22 〉	통과 (1501.41ms, 10.3MB)
 # 테스트 23 〉	통과 (1544.48ms, 10.4MB)
+
+
+
+# a = 0: 기둥 / 1: 보
+# b = 0: 삭제 / 1: 설치
+
+# def solution(n, build_frame):
+#     def install_check(x, y, a):
+#         # case 기둥
+#         if a == 0:
+#             if y == 0 or wall[y][x][1] or wall[y][x][2] or wall[y][x][3]:
+#                 return True  
+#         # case 보
+#         else:
+#             if wall[y][x][1] or wall[y][x+1][1] or wall[y][x][3] or wall[y][x+1][2]:
+#                 return True
+
+#     def remove_check(x, y, a):
+#         # case 기둥
+#         if a == 0:
+#             return
+#         # case 보
+#         else:
+#             return
+
+#     def build(x, y, a, b):
+#         nonlocal wall
+
+#         if a == 0:
+#             wall[y][x][0] = b
+#             wall[y+1][x][1] = b
+#         else:
+#             wall[y][x][2] = b
+#             wall[y][x+1][3] = b
+
+#     answer = [[]]
+#     wall = [[[0, 0, 0, 0] for _ in range(n+1)] for _ in range(n+1)]
+
+#     for [x, y, a, b] in build_frame:
+#         # case 설치
+#         if b == 1:
+#             if install_check(x, y, a):
+#                 build(x, y, a, b)
+#         # case 제거
+#         else:
+#             if remove_check(x, y, a):
+#                 build(x, y, a, b)
+
+#     return answer
