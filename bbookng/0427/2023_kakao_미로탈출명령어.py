@@ -12,7 +12,6 @@ def solution(n, m, x, y, r, c, k):
             return route
 
         for i in range(4):
-            print(direction[i])
             nx, ny = cx + dx[i], cy + dy[i]
             if 0 < nx < n + 1 and 0 < ny < m + 1:
                 # 남은 거리가 k보다 많으면 안봐도 됨
