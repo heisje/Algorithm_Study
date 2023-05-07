@@ -5,6 +5,7 @@ for i in range(n):
     matrix.append(list(map(int, input().split())))
 
 
+
 time = 0
 di = [-1, 0, 1, 0]
 dj = [0, 1, 0, -1]
