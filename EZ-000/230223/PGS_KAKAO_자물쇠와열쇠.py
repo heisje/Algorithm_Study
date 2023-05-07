@@ -20,8 +20,8 @@ def solution(key, lock):
         return rot_key
 
     
-    def check(row, col, now_key, lock_copy):                    # params: 현재 시작 위치, 현재 열쇠의 모양, 확장된 자물쇠의 복사본
-        for i in range(M):                                      # return: boolean 자물쇠가 열리는지 여부                   
+    def check(row, col, now_key, lock_copy):            # params: 현재 시작 위치, 현재 열쇠의 모양, 확장된 자물쇠의 복사본
+        for i in range(M):                              # return: boolean 자물쇠가 열리는지 여부
             for j in range(M):
                 lock_copy[i + row][j + col] += now_key[i][j]
 
