@@ -1,4 +1,4 @@
-# 1224ms
+# 56ms
 
 # 연속된 초밥을 line으로 보고
 # D개의 길이를 가지고 0으로 초기화 된 li를 가지고
@@ -6,6 +6,8 @@
 # 이후 back을 하나씩 뒤로 옮기면서 완전 탐색한다.
 # 탐색중에 C를 만나면 카운트 하지 않는다.
 # 0이 되거나 0에서 1로 될 때 카운트를 시작한다.
+import sys
+input = sys.stdin.readline
 
 def main():
     N, D, K, C = map(int, input().split())
