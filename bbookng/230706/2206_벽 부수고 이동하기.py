@@ -27,4 +27,5 @@ def bfs():
                     q.append((nx, ny, state))
     return -1
 
+
 print(bfs())
