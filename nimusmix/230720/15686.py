@@ -2,15 +2,12 @@ from itertools import combinations
 
 N, M = map(int, input().split())
 min_value = 1e9
-town = []
-houses = []
-chickens = []
+houses, chickens = [], []
 distances = {}
 
 for i in range(N):
     arr = list(map(int, input().split()))
-    town.append(arr)
-    
+
     for j in range(N):
         if arr[j] == 1:
             houses.append((i, j))
